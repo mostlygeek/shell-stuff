@@ -1,0 +1,7 @@
+Shell environment scripts.
+
+Eventual Usage: 
+
+# git clone
+# run ./setup.sh
+# rejoice.
