@@ -7,8 +7,9 @@
 echo "Best results, run in $HOME"
 curl -L https://github.com/mostlygeek/shell-stuff/tarball/master > shellenv.master.tar.gz
 tar -zxvf shellenv.master.tar.gz
+rm shellenv.master.tar.gz
 DIR=`ls -1 | grep mostlygeek-shell-`
 mv $DIR shellenv
 cd shellenv
 ./setup.sh
-rm shellenv.master.tar.gz
+cd ..
