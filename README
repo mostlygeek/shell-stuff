@@ -1,7 +1,5 @@
 Shell environment scripts.
 
-Eventual Usage: 
+Usage, just copy/paste the following: 
 
-# git clone
-# run ./setup.sh
-# rejoice.
+> curl https://raw.github.com/mostlygeek/shell-stuff/master/install.sh | bash
