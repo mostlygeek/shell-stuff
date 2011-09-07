@@ -2,19 +2,37 @@
 
 PWD=`pwd`; 
 
-# link in vim settings
-if [ ! -d ~/.vim ] 
-then
-    echo "Creating ~/.vim"
-    ln -s "$PWD/vim/vim-dir" ~/.vim
+
+# check for color awesomeness... 
+
+echo -n "  - Check Terminal is xterm-256color: "
+if [ $TERM != "xterm-256color" ] 
+then 
+    echo "Fail, it is : $TERM"
 else
-    echo "~/.vim already exists"
+    echo "OK"
 fi
 
-if [ ! -f ~/.vimrc ]
+# Create VIM Directories
+echo -n "  - Creating $HOME/.vim ... " 
+if [ ! -d "$HOME/.vim" ] 
 then
-    echo "Creating ~/.vimrc"
-    ln -s "$PWD/vim/vimrc" ~/.vimrc
+    ln -s "$PWD/vim/vim-dir" "$HOME/.vim"
+    echo "Done"
+    
+    # used to hold vim backup/swap data (keep it all together)
+    echo "    > Creating $HOME/.vim/backup, $HOME/.vim/tmp"
+    mkdir "$HOME/.vim/backup"
+    mkdir "$HOME/.vim/tmp"
+else
+    echo "Skip, already exists"
+fi
+
+echo -n "  - Creating $HOME/.vimrc ... "
+if [ ! -f "$HOME/.vimrc" ]
+then
+    ln -s "$PWD/vim/vimrc" "$HOME/.vimrc"
+    echo "Done"
 else 
-    echo "~/.vimrc already exists"
+    echo "Skip, already exists"
 fi

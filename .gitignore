@@ -1,0 +1,4 @@
+vim/vim-dir/backup/*
+!vim/vim-dir/backup/README
+vim/vim-dir/tmp/*
+!vim/vim-dir/tmp/README

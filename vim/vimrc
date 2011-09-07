@@ -1,1 +1,47 @@
-syntax on
+" 
+" Tips/Tricks from SO: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc
+" 
+
+filetype on
+filetype plugin on
+syntax enable
+
+" Who doesn't like autoindent?
+set autoindent
+
+" Spaces are better than a tab character
+set expandtab
+set smarttab
+
+" Who wants an 8 character tab?  Not me!
+set shiftwidth=4
+set softtabstop=4
+
+
+" Cool tab completion stuff
+set wildmenu
+set wildmode=list:longest,full
+
+" Line Numbers PWN!
+set number
+
+" Ignore cases in searches
+set ignorecase
+
+" if search pattern contains an upper case char, it will do a case-sensitive
+" search
+set smartcase
+
+colorscheme inkpot
+
+"Status line gnarliness
+set laststatus=2
+set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
+
+"Working/Backup Directories
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+
+" Automatically change working dir. to the one the file is in
+"set autochdir
