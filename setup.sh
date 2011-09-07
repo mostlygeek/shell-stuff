@@ -19,11 +19,6 @@ if [ ! -d "$HOME/.vim" ]
 then
     ln -s "$PWD/vim/vim-dir" "$HOME/.vim"
     echo "Done"
-    
-    # used to hold vim backup/swap data (keep it all together)
-    echo "    > Creating $HOME/.vim/backup, $HOME/.vim/tmp"
-    mkdir "$HOME/.vim/backup"
-    mkdir "$HOME/.vim/tmp"
 else
     echo "Skip, already exists"
 fi
