@@ -6,6 +6,9 @@ filetype on
 filetype plugin on
 syntax enable
 
+" Turn on spell checking
+set spell
+
 " Who doesn't like autoindent?
 set autoindent
 
