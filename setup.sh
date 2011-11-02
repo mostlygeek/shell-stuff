@@ -1,7 +1,6 @@
 #!/bin/bash
 
-PWD=`pwd`; 
-
+PWD=`dirname $0`; 
 
 # check for color awesomeness... 
 echo -n "  - Check Terminal is xterm-256color: "

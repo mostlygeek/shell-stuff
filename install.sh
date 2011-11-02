@@ -4,12 +4,18 @@
 # 1. curl https://raw.github.com/mostlygeek/shell-stuff/master/install.sh | bash
 # 2. watch the magic happen
 
-echo "Best results, run in $HOME"
-curl -L https://github.com/mostlygeek/shell-stuff/tarball/master > shellenv.master.tar.gz
-tar -zxvf shellenv.master.tar.gz
-rm shellenv.master.tar.gz
-DIR=`ls -1 | grep mostlygeek-shell-`
-mv $DIR shellenv
-cd shellenv
+# test for existance of git
+hash git 2>&- || { echo "Error: Git needs to be installed."; exit; }
+
+cd ~
+
+if [ -e mg-shellenv ]
+then
+   echo "Error: mg-shellenv already exists"
+   exit
+fi
+
+git clone git@github.com:mostlygeek/shell-stuff.git mg-shellenv
+cd mg-shellenv
 ./setup.sh
-cd ..
+cd ~
