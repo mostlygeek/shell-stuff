@@ -15,7 +15,11 @@ then
    exit
 fi
 
-git clone git@github.com:mostlygeek/shell-stuff.git mg-shellenv
+#git clone git@github.com:mostlygeek/shell-stuff.git mg-shellenv
+# 
+# this is the READ-ONLY installation for when I don't have 
+# an ssh-key set up for the remote side
+git clone git://github.com/mostlygeek/shell-stuff.git mg-shellenv
 cd mg-shellenv
 ./setup.sh
 cd ~
