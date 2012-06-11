@@ -2,12 +2,12 @@
 
 cd `dirname $0`;
 
-PWD=`pwd`; 
+PWD=`pwd`;
 
-# check for color awesomeness... 
+# check for color awesomeness...
 echo -n "  - Check Terminal is xterm-256color: "
-if [ $TERM != "xterm-256color" ] 
-then 
+if [ $TERM != "xterm-256color" ]
+then
     echo "Fail, it is : $TERM"
 else
     echo "OK"
@@ -24,8 +24,8 @@ else
 fi
 
 # Create VIM Directories
-echo -n "  - Creating $HOME/.vim ... " 
-if [ ! -e "$HOME/.vim" ] 
+echo -n "  - Creating $HOME/.vim ... "
+if [ ! -e "$HOME/.vim" ]
 then
     ln -s "$PWD/vim/vim-dir" "$HOME/.vim"
     echo "Done"
@@ -38,6 +38,6 @@ if [ ! -e "$HOME/.vimrc" ]
 then
     ln -s "$PWD/vim/vimrc" "$HOME/.vimrc"
     echo "Done"
-else 
+else
     echo "Skip, already exists"
 fi
