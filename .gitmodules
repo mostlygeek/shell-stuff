@@ -1,0 +1,6 @@
+[submodule "vim/vim-dir/bundle/fuzzyfinder"]
+	path = vim/vim-dir/bundle/fuzzyfinder
+	url = git@github.com:mostlygeek/FuzzyFinder.git
+[submodule "vim/vim-dir/bundle/vim-scala"]
+	path = vim/vim-dir/bundle/vim-scala
+	url = git@github.com:mostlygeek/vim-scala.git
