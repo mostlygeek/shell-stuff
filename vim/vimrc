@@ -66,3 +66,8 @@ nmap <leader>f :FufFile **/*<CR>
 nmap <leader>b :FufBuffer<CR>
 nmap <leader>t :FufTag<CR>
 nmap <leader>l :FufLine<CR>
+
+" Pathogen
+" here's why: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
+call pathogen#infect()
+call pathogen#helptags()
