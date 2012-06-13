@@ -4,3 +4,6 @@
 [submodule "vim/vim-dir/bundle/vim-scala"]
 	path = vim/vim-dir/bundle/vim-scala
 	url = git@github.com:mostlygeek/vim-scala.git
+[submodule "vim/vim-dir/bundle/delimitMate"]
+	path = vim/vim-dir/bundle/delimitMate
+	url = git://github.com/Raimondi/delimitMate.git

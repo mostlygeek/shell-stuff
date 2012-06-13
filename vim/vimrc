@@ -18,7 +18,7 @@ if version >= 700
 endif
 
 " Who doesn't like autoindent?
-set autoindent
+set cindent
 
 " Spaces are better than a tab character
 set expandtab
@@ -71,3 +71,6 @@ nmap <leader>l :FufLine<CR>
 " here's why: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
 call pathogen#infect()
 call pathogen#helptags()
+
+" Settings for delimitMate
+let delimitMate_expand_cr = 1
