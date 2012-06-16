@@ -74,3 +74,4 @@ call pathogen#helptags()
 
 " Settings for delimitMate
 let delimitMate_expand_cr = 1
+

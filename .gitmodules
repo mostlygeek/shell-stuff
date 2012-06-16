@@ -7,3 +7,6 @@
 [submodule "vim/vim-dir/bundle/delimiteMate"]
 	path = vim/vim-dir/bundle/delimiteMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule "vim/vim-dir/bundle/vim-markdown"]
+	path = vim/vim-dir/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
