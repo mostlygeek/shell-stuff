@@ -67,7 +67,7 @@ nmap <leader>b :FufBuffer<CR>
 nmap <leader>t :FufTag<CR>
 nmap <leader>l :FufLine<CR>
 
-" Tab Navigation
+" Tab Navigation, allows quick scrolling between tabs/viewports
 nmap <S-Tab> :tabn<CR>
 nmap ~ :tabp<CR>
 
