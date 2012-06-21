@@ -1,5 +1,19 @@
-term xterm-256color
 hardstatus on
 hardstatus alwayslastline
 hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H%{..Y} %m/%d %C%a "
 shell -$SHELL
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors – necessary for some reason
+attrcolor b ".I"
+
+# tell screen how to set colors. AB = background, AF=foreground
+# the first two are for other terminal emulators, just in case.
+# Ref: http://pjkh.com/articles/2008/07/09/osx-iterm-screen-vim-256-colors/
+#  -- on osx had to reinstall screen from ports
+termcapinfo xterm-256color "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
+term xterm-256color
+
+# erase background with current bg color
+defbce "on"
+
