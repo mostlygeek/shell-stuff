@@ -1,3 +1,4 @@
+crlf off        # no MS linebreaks
 hardstatus on
 hardstatus alwayslastline
 hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H%{..Y} %m/%d %C%a "
@@ -17,3 +18,8 @@ term xterm-256color
 # erase background with current bg color
 defbce "on"
 
+# M0ar Scrollback
+defscrollback 1337
+
+bindkey ^N next
+bindkey ^P prev

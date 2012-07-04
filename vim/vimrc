@@ -71,6 +71,7 @@ nmap <leader>l :FufLine<CR>
 " Tab Navigation, allows quick scrolling between tabs/viewports
 nmap <S-Tab> :tabn<CR>
 nmap ~ :tabp<CR>
+nmap <leader>n :tabnew<CR>
 
 " Pathogen
 " here's why: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
