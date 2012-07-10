@@ -13,3 +13,6 @@
 [submodule "vim/vim-dir/bundle/vim-ruby"]
 	path = vim/vim-dir/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/vim-dir/bundle/ack.vim"]
+	path = vim/vim-dir/bundle/ack.vim
+	url = git://github.com/mileszs/ack.vim.git
