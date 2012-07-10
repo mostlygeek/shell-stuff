@@ -1,10 +1,10 @@
 " 
-" Tips/Tricks from SO: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc
-" 
-
+" Tips/Tricks from SO: 
+"   http://stackoverflow.com/questions/164847/what-is-in-your-vimrc
+"
 set nocompatible
 filetype on
-filetype plugin on
+filetype plugin indent on
 syntax enable
 
 " Cool tab completion stuff
@@ -18,6 +18,10 @@ if version >= 700
    set nospell
 endif
 
+" makes things faster ...
+" http://stackoverflow.com/questions/307148/vim-scrolling-slowly
+set ttyfast
+
 " Who doesn't like autoindent?
 set cindent
 
@@ -28,7 +32,6 @@ set smarttab
 " Who wants an 8 character tab?  Not me!
 set shiftwidth=4
 set softtabstop=4
-
 
 " Cool tab completion stuff
 set wildmenu
@@ -43,6 +46,45 @@ set ignorecase
 " if search pattern contains an upper case char, it will do a case-sensitive
 " search
 set smartcase
+
+" Leave Insert mode by hitting "jj"
+inoremap jj <ESC>
+
+" create a new split window and switch over to it 
+nnoremap <leader>w <C-w>v<C-w>l
+
+" make it easier to move between split windows
+" using ctrl+hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" ===================================================
+" Tame searching/moving
+" ===================================================
+nnoremap / /\v
+vnoremap / /\v
+
+" smartcase = all lower case, case insensitve, w/ uppercase
+" do a case sensitive search
+set ignorecase
+set smartcase
+
+" global searches by default
+set gdefault
+
+" highlight search as you type
+set incsearch
+set showmatch
+set hlsearch
+
+" clear out search, makes clearing highlights easier
+nnoremap <leader><space> :noh<cr>
+
+" use tab to jump to matching brace
+nnoremap <tab> %
+vnoremap <tab> %
 
 colorscheme inkpot
 
@@ -73,11 +115,35 @@ nmap <S-Tab> :tabn<CR>
 nmap ~ :tabp<CR>
 nmap <leader>n :tabnew<CR>
 
+" Get rid of <F1> Help which is hit accidentally all the time
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+" remap ; to : to save a keypress
+nnoremap ; :
+
+" ===================================================
 " Pathogen
 " here's why: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
+" ===================================================
 call pathogen#infect()
 call pathogen#helptags()
 
 " Settings for delimitMate
 let delimitMate_expand_cr = 1
 
+" highlight past 80 chars
+" mapped to <Leader>8 so it can be turned on/off at will 
+" ref: http://vim.wikia.com/wiki/VimTip810#Toggle_matching_based_on_textwidth
+
+nnoremap <silent> <Leader>8
+      \ :if exists('w:long_line_match') <Bar>
+      \   silent! call matchdelete(w:long_line_match) <Bar>
+      \   unlet w:long_line_match <Bar>
+      \ elseif &textwidth > 0 <Bar>
+      \   let w:long_line_match = matchadd('ErrorMsg', '\%>'.&tw.'v.\+', -1) 
+      \      <Bar>
+      \ else <Bar>
+      \   let w:long_line_match = matchadd('ErrorMsg', '\%>80v.\+', -1) <Bar>
+      \ endif<CR>
