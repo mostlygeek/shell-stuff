@@ -47,8 +47,9 @@ set ignorecase
 " search
 set smartcase
 
-" Leave Insert mode by hitting "jj"
-inoremap jj <ESC>
+" Leave Insert mode by hitting "jj" || "kk"
+inoremap jj <ESC>j
+inoremap kk <ESC>k
 
 " create a new split window and switch over to it 
 nnoremap <leader>w <C-w>v<C-w>l
