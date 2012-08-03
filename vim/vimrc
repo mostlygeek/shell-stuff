@@ -23,7 +23,7 @@ endif
 set ttyfast
 
 " Who doesn't like autoindent?
-set cindent
+set smartindent
 
 " Spaces are better than a tab character
 set expandtab
@@ -36,6 +36,11 @@ set softtabstop=4
 " Cool tab completion stuff
 set wildmenu
 set wildmode=list:longest,full
+
+" textwidth should be 80chars
+set textwidth=80
+" reformat paragraph w/ hard wraps to textwidth
+nnoremap <leader>r gqap
 
 " Line Numbers PWN!
 set number
