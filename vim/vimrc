@@ -109,11 +109,12 @@ set directory=~/.vim/tmp
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
 
-" Fuzzy Finder shortcuts
+" Fuzzy Finder tweaks
 nmap <leader>f :FufFile **/*<CR>
 nmap <leader>b :FufBuffer<CR>
 nmap <leader>t :FufTag<CR>
 nmap <leader>l :FufLine<CR>
+let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp|class)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
 
 " Tab Navigation, allows quick scrolling between tabs/viewports
 nmap <S-Tab> :tabn<CR>
@@ -155,3 +156,10 @@ nnoremap <silent> <Leader>8
       \ else <Bar>
       \   let w:long_line_match = matchadd('ErrorMsg', '\%>80v.\+', -1) <Bar>
       \ endif<CR>
+
+" ===================================================
+" Scala Commenter
+" http://www.vim.org/scripts/script.php?script_id=3047
+" ===================================================
+autocmd FileType scala let b:scommenter_class_author='Benson Wong' 
+autocmd FileType scala let b:scommenter_file_author='Benson Wong' 

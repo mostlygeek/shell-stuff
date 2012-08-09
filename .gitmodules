@@ -19,3 +19,9 @@
 [submodule "vim/vim-dir/bundle/zencoding"]
 	path = vim/vim-dir/bundle/zencoding
 	url = git://github.com/mattn/zencoding-vim.git
+[submodule "vim/vim-dir/bundle/self"]
+	path = vim/vim-dir/bundle/self
+	url = git://github.com/megaannum/self.git
+[submodule "vim/vim-dir/bundle/scala_commenter"]
+	path = vim/vim-dir/bundle/scala_commenter
+	url = git://github.com/megaannum/scala_commenter.git
